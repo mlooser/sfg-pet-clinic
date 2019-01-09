@@ -10,14 +10,15 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 @PropertySource("classpath:datasource.properties")
 public class PropertyConfig {
 
-	@Value("${clinic.username}")
-	String user;
+	@Value("${clinic.db.username}")
+	private String user;
 	
-	@Value("${clinic.password}")
-	String password;
+	@Value("${clinic.db.password}")
+	private String password;
 	
-	@Value("${clinic.dburl}")
-	String dburl;
+	@Value("${clinic.db.url}")
+	private String dburl;
+		
 	
 	@Bean
 	public PetClinicDataSource petClinicDataSource() {
