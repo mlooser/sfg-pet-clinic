@@ -26,7 +26,7 @@ public class DataLoader implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		
+		//test
 		PetType dog = new PetType();
 		dog.setName("Dog");
 		dog = petTypeService.save(dog);
