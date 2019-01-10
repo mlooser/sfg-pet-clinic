@@ -30,3 +30,4 @@ mvnw
 .settings/org.eclipse.jdt.core.prefs
 .settings/org.eclipse.core.resources.prefs
 .mvn/wrapper/maven-wrapper.properties
+/target/

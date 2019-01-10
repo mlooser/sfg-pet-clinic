@@ -4,6 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import com.example.ml.sfgpetclinic.model.Owner;
+import com.example.ml.sfgpetclinic.model.Pet;
 import com.example.ml.sfgpetclinic.model.PetType;
 import com.example.ml.sfgpetclinic.model.Vet;
 import com.example.ml.sfgpetclinic.services.OwnerService;
@@ -37,14 +38,42 @@ public class DataLoader implements CommandLineRunner {
 		
 		System.out.println("PetType loaded...");
 		
+		Pet dog1 = new Pet();
+		dog1.setName("Dog_1");
+		dog1.setPetType(dog);
+		
+		Pet dog2 = new Pet();
+		dog2.setName("Dog_2");
+		dog2.setPetType(dog);
+		
+		Pet cat1 = new Pet();
+		cat1.setName("Cat_1");
+		cat1.setPetType(cat);
+		
+		Pet cat2 = new Pet();
+		cat2.setName("Cat_2");
+		cat2.setPetType(cat);
+		
 		Owner owner1 = new Owner();		
 		owner1.setFirstName("O_Adam");
-		owner1.setLastName("O_Adamski");		
+		owner1.setLastName("O_Adamski");	
+		owner1.setAddress("O_Address");
+		owner1.setCity("O_City");
+		owner1.setTelephone("O_123123");
+		owner1.getPets().add(dog1);
+		owner1.getPets().add(cat1);
 		ownerService.save(owner1);
+		
+		
 		
 		Owner owner2 = new Owner();		
 		owner2.setFirstName("O_Badam");
-		owner2.setLastName("O_Badamski");		
+		owner2.setLastName("O_Badamski");	
+		owner2.setAddress("O_Address");
+		owner2.setCity("O_City");
+		owner2.setTelephone("O_123123");
+		owner2.getPets().add(dog2);
+		owner2.getPets().add(cat2);
 		ownerService.save(owner2);
 		
 		System.out.println("Owners loaded...");
