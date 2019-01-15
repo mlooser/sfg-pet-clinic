@@ -1,11 +1,14 @@
 package com.example.ml.sfgpetclinic.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Speciality extends BaseEntity{
 
 	private String description;	
 	
 	public Speciality() {
-		super();
+		
 	}
 
 	public Speciality(String description) {
