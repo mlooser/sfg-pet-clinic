@@ -38,7 +38,7 @@ public abstract class AbstractSDJPAService<E,ID,T extends CrudRepository<E, ID>>
 	}
 
 	@Override
-	public void deleteBy(ID id) {
+	public void deleteById(ID id) {
 		repository.deleteById(id);
 	}
 }
